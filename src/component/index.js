@@ -6,6 +6,7 @@ class index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: "This is Title of Image",
       image: [
         {
           image: require("../img/1.jpg"),
@@ -15,40 +16,54 @@ class index extends React.Component {
         },
         {
           image: require("../img/2.jpg"),
-          title: "dog",
+          title: "Dog Work",
           text: "this is dog",
           alt: "dog"
         },
         {
           image: require("../img/3.jpg"),
-          title: "dog sleep",
+          title: "Dog Lazy",
           text: "Sleepy (-.-)zZ",
           alt: "dog"
         },
         {
           image: require("../img/4.jpg"),
-          title: "Hedgehog",
+          title: "Dog Sleep",
           text: "this is hedgehog",
           alt: "hedgehog"
         },
         {
           image: require("../img/5.jpg"),
-          title: "dog",
+          title: "Dog twin",
           text: "this is dog",
           alt: "dog"
         },
         {
           image: require("../img/6.jpg"),
-          title: "dog sleep",
+          title: "Dog Love",
           text: "Sleepy (-.-)zZ",
           alt: "dog"
         }
       ]
     };
+    this._onClick = this._onClick.bind(this)
   }
+
+  _onClick(e) {
+      console.log(e)
+    this.setState({
+      name: e
+    });
+  }
+
   render() {
     return (
       <Container>
+        <div className="header justify-content-center">
+          <h1>
+            {"<--"} {this.state.name} {"-->"}
+          </h1>
+        </div>
         <Row>
           {this.state.image.map((value, key) => {
             return (
@@ -59,6 +74,7 @@ class index extends React.Component {
                   title={value.title}
                   text={value.text}
                   alt={value.alt}
+                  _onClick={this._onClick}
                 />
               </Col>
             );

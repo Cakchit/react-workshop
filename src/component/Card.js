@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Card.css"
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 class AnimalCard extends React.Component {
   render() {
@@ -16,6 +16,7 @@ class AnimalCard extends React.Component {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{text}</Card.Text>
+          <Button onClick={()=>this.props._onClick(title)}>Click me!</Button>
         </Card.Body>
       </Card>
     );
