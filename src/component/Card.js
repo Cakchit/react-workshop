@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card } from 'react-bootstrap';
-import "../css/card.css";
+import "../css/Card.css";
 class PostCard extends Component {
   render() {
     const { title, body } = this.props;
