@@ -1,0 +1,40 @@
+nav {
+  top: 0;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  background: #13a4fd;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+nav > .nav-image {
+  display: flex;
+  margin: 0 0.5em;
+}
+
+.image-show {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 0.2em;
+  overflow: hidden;
+}
+
+.nav-center-text {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.nav-center-text > span {
+  font-size: 20px;
+  margin: 0 0.5em;
+}

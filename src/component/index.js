@@ -46,11 +46,11 @@ class index extends React.Component {
         }
       ]
     };
-    this._onClick = this._onClick.bind(this)
+    this._onClick = this._onClick.bind(this);
   }
 
   _onClick(e) {
-      console.log(e)
+    console.log(e);
     this.setState({
       name: e
     });
