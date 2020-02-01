@@ -51,6 +51,7 @@ class index extends React.Component {
 
   _onClick(e) {
     console.log(e);
+    document.title = `Hello ${e}`;
     this.setState({
       name: e
     });
